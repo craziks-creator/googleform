@@ -8,20 +8,6 @@
         "updates"
     ],
     "repository": "https://github.com/craziks-creator/notofssc",
-    "env": {
-        "TOKEN": {
-            "description": "",
-            "required": "True"
-        },
-        "API HASH": {
-            "description": "",
-            "required": "True"
-        },
-        "API ID": {
-            "description": "",
-            "required": "True"
-        }
-    },
     "stack": "heroku-20",
     "buildpacks": [
         {
