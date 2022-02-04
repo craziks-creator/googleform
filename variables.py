@@ -9,7 +9,7 @@ cancel_markup = ReplyKeyboardMarkup(
 )
 
 message_developer_button = [InlineKeyboardButton(text = "Contact Developer 👨‍💻 ", url=admin_link)]
-
+"""
 #menu_button = [['🧾 Menu']]
 
 #menu_markup = ReplyKeyboardMarkup(
@@ -21,7 +21,7 @@ message_developer_button = [InlineKeyboardButton(text = "Contact Developer 👨�
 #me_markup = ReplyKeyboardMarkup(
     #menu_elements,one_time_keyboard=False, resize_keyboard=True,
 )
-
+"""
 help_message = """I am <b>Marksheet Bot</b> developed by @The_Pundits , I don't know his name ❤️\n
     """
 
