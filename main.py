@@ -121,11 +121,11 @@ def main():
     updater.bot.set_my_commands(
         [
             BotCommand("start", "Start Me"),
-            BotCommand("create", "Form Creation"),
-            BotCommand("view_forms", "Your Forms"),
-            BotCommand("answers", "Answers for your Forms"),
+            #BotCommand("create", "Form Creation"),
+            #BotCommand("view_forms", "Your Forms"),
+            #BotCommand("answers", "Answers for your Forms"),
             BotCommand("help", "Available commands"),
-            BotCommand("stats", "Get bot statistics"),
+            #BotCommand("stats", "Get bot statistics"),
         ]
     )
     updater.start_polling()
