@@ -64,7 +64,7 @@ def answer_query(update: Update, context: CallbackContext):
         #query.edit_message_text("There is <b>no answers</b> bhak 😔",parse_mode='HTML')
     #else: 
         #query.edit_message_text("There is <b> answers</b> bhak 😔",parse_mode='HTML')
-    #beginning(update, context)
+    beginning(update, context)
 
 def answer_ck(update: Update, context: CallbackContext):
     userid = update.effective_user.id
