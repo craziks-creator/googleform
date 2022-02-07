@@ -53,7 +53,7 @@ def answer_query(update: Update, context: CallbackContext):
     userid = update.effective_user.id
     formid = int(data.split("_")[1])
     print(formid)
-    query.answer("Displaying answers")
+    #query.answer("Displaying answers")
 
     ans_ck = creating_csv_for_answers_for_all_forms(update, context, userid,formid)
 
