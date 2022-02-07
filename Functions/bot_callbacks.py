@@ -106,9 +106,9 @@ def start_command(update: Update, context: CallbackContext):
 
     else:
         ownerid, formid = list(map(int, context.args[0].split("_")))
-        if userid==ownerid: 
+        """if userid==ownerid: 
             update.effective_message.reply_html("Sorry! You can't answer your <b>own form</b> 🛑")
-            return beginning(update, context)
+            return beginning(update, context)"""
         current_form = extract_form(formid, ownerid)
 
         if current_form == []:
