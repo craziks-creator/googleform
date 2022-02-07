@@ -56,12 +56,13 @@ def answer_query(update: Update, context: CallbackContext):
     #query.answer("Displaying answers")
 
     ans_ck = creating_csv_for_answers_for_all_forms(update, context, userid,formid)
-    query.edit_message_text("There") 
+    query.edit_message_text("There is <b>no answers</b> for this form 😔",parse_mode='HTML')
 
     if ans_ck == 0:
         query.edit_message_text("There is <b>no answers</b> for this form 😔",parse_mode='HTML')
-
-    beginning(update, context)
+    else: 
+    query.edit_message_text("There is <b> answers</b> for this form 😔",parse_mode='HTML')
+    #beginning(update, context)
 
 def answer_ck(update: Update, context: CallbackContext):
     userid = update.effective_user.id
