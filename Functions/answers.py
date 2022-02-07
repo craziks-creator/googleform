@@ -52,17 +52,19 @@ def answer_query(update: Update, context: CallbackContext):
     data = query.data
     userid = update.effective_user.id
     formid = int(data.split("_")[1])
-    print(formid)
-    query.answer("Answers.csv")
-
     ans_ck = creating_csv_for_answers_for_all_forms(update, context, userid,formid)
+    print(ans_ck)
+    #query.answer("Answers.csv")
+
+    #ans_ck = creating_csv_for_answers_for_all_forms(update, context, userid,formid)
     #query.edit_message_text("There is <b>no answers</b> for this form 😔",parse_mode='HTML')
 
     if ans_ck == 0:
-        query.edit_message_text("There is <b>no answers</b> bhak 😔",parse_mode='HTML')
-    else: 
-        query.edit_message_text("There is <b> answers</b> bhak 😔",parse_mode='HTML')
-    beginning(update, context)
+        query.edit_message_text(ans_ck)
+        #query.edit_message_text("There is <b>no answers</b> bhak 😔",parse_mode='HTML')
+    #else: 
+        #query.edit_message_text("There is <b> answers</b> bhak 😔",parse_mode='HTML')
+    #beginning(update, context)
 
 def answer_ck(update: Update, context: CallbackContext):
     userid = update.effective_user.id
