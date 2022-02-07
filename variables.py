@@ -9,13 +9,13 @@ cancel_markup = ReplyKeyboardMarkup(
 )
 
 message_developer_button = [InlineKeyboardButton(text = "Contact Developer 👨‍💻 ", url=admin_link)]
+menu_button = [['🧾 Menu']]
 
-menu_elements = [['Create 📝','View 🔎','Answers ✍'],['Help ℹ','Bot Stats 📈']]
 menu_markup = ReplyKeyboardMarkup(
     menu_button, one_time_keyboard=False, resize_keyboard=True
 )
 
-menu_elements = [['Help ℹ']]
+menu_elements = [['Create 📝','View 🔎','Answers ✍'],['Help ℹ','Bot Stats 📈']]
 
 me_markup = ReplyKeyboardMarkup(
     menu_elements,one_time_keyboard=False, resize_keyboard=True,
