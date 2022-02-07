@@ -43,9 +43,9 @@ def creating_csv_for_answers_for_all_forms(update: Update, context: CallbackCont
             caption=caption_text,
         )
 
-        #os.remove(csv_file)
+        os.remove(csv_file)
 
-    return Answers.csv ##indicates no answers for specific form
+    return flag ##indicates no answers for specific form
 
 def answer_query(update: Update, context: CallbackContext):
     query = update.callback_query
@@ -53,10 +53,11 @@ def answer_query(update: Update, context: CallbackContext):
     userid = update.effective_user.id
     formid = int(data.split("_")[1])
     print(formid)
-    #query.answer("Displaying answers")
+    query.answer("Displaying answers")
 
-    ans_ck = creating_csv_for_answers_for_all_forms(update, context, userid, formid)
-    query.edit_message_text(ans_ck) 
+    ans_ck = creating_csv_for_answers_for_all_forms(update, context, userid,formid)
+        query.edit_message_text("There") 
+
     if ans_ck == 0:
         query.edit_message_text("There is <b>no answers</b> for this form 😔",parse_mode='HTML')
 
