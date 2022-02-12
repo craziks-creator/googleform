@@ -22,7 +22,7 @@ me_markup = ReplyKeyboardMarkup(
     menu_elements,one_time_keyboard=False, resize_keyboard=True,
 )
 
-help_message = """I am <b>Form Bot</b> developed by ADMIN_USERNAME ❤️\n
+help_message = """I am <b>Form Bot</b> developed by @The_Pundits with ❤️\n
 My available commands 🔰\n
   /start - To <b>start</b> the bot
   /create - To <b>create your own form</b>
