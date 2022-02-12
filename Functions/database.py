@@ -270,7 +270,7 @@ def creating_csv_for_each_form(form_records, userid):
         ans_dict[j[0]].append(j[1])
         tracker += 1
 
-    filename = f"answers_{userid}:{formid}.xls"
+    filename = f"answers_{userid}:{formid}.csv"
 
     qn = Questions.get_questions(formid, userid)
 
