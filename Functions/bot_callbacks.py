@@ -91,7 +91,7 @@ def beginning(update: Update, context: CallbackContext):
         f"Hai <b>{fullname}</b>😇\nI m here for <b>creating forms</b>", reply_markup=InlineKeyboardMarkup([message_developer_button]), 
     )
     update.effective_message.reply_html(
-        "Press <b>Menu</b> to know my commands",reply_markup=menu_markup
+        "Press <b>Menu</b> to know my commands"
     )
     return ConversationHandler.END
 
