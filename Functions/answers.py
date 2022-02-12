@@ -60,7 +60,7 @@ def answer_query(update: Update, context: CallbackContext):
     if ans_ck == 0:
         query.edit_message_text("There is <b>no answers</b> for this form 😔",parse_mode='HTML')
 
-    beginning(update, context)
+    #beginning(update, context)
 
 def answer_ck(update: Update, context: CallbackContext):
     userid = update.effective_user.id
