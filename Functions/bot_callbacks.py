@@ -6,7 +6,7 @@ import logging
 from telegram import (
     ReplyKeyboardRemove,
 )
-from variables import cancel_markup, help_message, menu_markup, message_developer_button, me_markup
+from variables import cancel_markup, help_message, menu_markup, message_developer_button
 from Functions.database import (
     Answers,
     Bot,
@@ -51,19 +51,19 @@ def typing_commands_in_CH(update: Update, context: CallbackContext):
 
 def unknown_messages(update: Update, context: CallbackContext):
     update.effective_message.reply_text(
-        "I m unable to recognise this 😔",reply_markup=me_markup 
+        "I m unable to recognise this 😔"
     )
 
 def unknown_commands(update: Update, context: CallbackContext):
     update.effective_message.reply_text(
-        "Sorry, I didn't understand that command 😔", reply_markup=me_markup
+        "Sorry, I didn't understand that command 😔"
     )
     return help_command(update, context)
 
 
 ## Reply Keyboard button = Cancel
 def cancel_command(update: Update, context: CallbackContext):
-    update.effective_message.reply_html("Your current operation is <b>cancelled</b> ❌",reply_markup=me_markup)
+    update.effective_message.reply_html("Your current operation is <b>cancelled</b> ❌")
     return -1
 
 
@@ -81,7 +81,7 @@ def stats(update: Update, context :CallbackContext):
     return
 
 def show_menu(update: Update, conext : CallbackContext):
-    update.effective_message.reply_text("Menu 🔽 ", reply_markup=me_markup)
+    update.effective_message.reply_text("Menu 🔽 ")
 
 
 def beginning(update: Update, context: CallbackContext):
@@ -230,7 +230,7 @@ def questions_started(update: Update, context: CallbackContext):
 
     if context.user_data["current_question"] == context.user_data["question_count"]:
         update.effective_message.reply_text(
-            "Your questions are saved successfully ✅",reply_markup=me_markup
+            "Your questions are saved successfully ✅"
         )
 
     else:
