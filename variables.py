@@ -9,7 +9,7 @@ cancel_markup = ReplyKeyboardMarkup(
 )
 
 message_developer_button = [InlineKeyboardButton(text = "Contact Developer 👨‍💻 ", url=admin_link)]
-
+"""
 menu_button = [['🧾 Menu']]
 
 menu_markup = ReplyKeyboardMarkup(
@@ -21,7 +21,7 @@ menu_elements = [['Create 📝','View 🔎','Answers ✍'],['Help ℹ','Bot Stat
 me_markup = ReplyKeyboardMarkup(
     menu_elements,one_time_keyboard=False, resize_keyboard=True,
 )
-
+"""
 help_message = """I am <b>Form Bot</b> developed by @The_Pundits with ❤️\n
 My available commands 🔰\n
   /start - To <b>start</b> the bot
