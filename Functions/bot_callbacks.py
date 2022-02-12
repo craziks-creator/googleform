@@ -108,19 +108,19 @@ def start_command(update: Update, context: CallbackContext):
         ownerid, formid = list(map(int, context.args[0].split("_")))
         """if userid==ownerid: 
             update.effective_message.reply_html("Sorry! You can't answer your <b>own form</b> 🛑")
-            return beginning(update, context)"""
+            #return beginning(update, context)"""
         current_form = extract_form(formid, ownerid)
 
         if current_form == []:
             update.effective_message.reply_html(
                 "This form is <b>invalid!<b/>\nIt maybe deleted by creator"
             )
-            return beginning(update, context)
+            #return beginning(update, context)
 
         
         if User.is_answered(userid, formid):
             update.effective_message.reply_html("Sorry! You answered this form <b>already </b>! 🛑")
-            return beginning(update, context)
+            #return beginning(update, context)
 
         context.user_data["form"] = current_form
         context.user_data["answers"] = []
@@ -196,7 +196,7 @@ def answering(update: Update, context: CallbackContext):
         storing_answers(update, context)
         update.effective_message.reply_text("Your answers are saved 🗒")
         context.user_data.clear()
-        return beginning(update, context)
+        #return beginning(update, context)
 
     else:
         answers.append(update.effective_message.text)
