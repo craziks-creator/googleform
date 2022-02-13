@@ -66,7 +66,11 @@ def cancel_command(update: Update, context: CallbackContext):
     update.effective_message.reply_html("Your current operation is <b>cancelled</b> ❌")
     return -1
 
-
+"""
+def delete_command(update: Update, context: CallbackContext):
+    update.effective_message.reply_html("Your current operation is <b>cancelled</b> ❌")
+    return -1
+"""
 def help_command(update: Update, context: CallbackContext):
     update.effective_message.reply_html(
         help_message, reply_markup=menu_markup)
