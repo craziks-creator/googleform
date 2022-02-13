@@ -68,8 +68,8 @@ def cancel_command(update: Update, context: CallbackContext):
 
 """
 def delete_command(update: Update, context: CallbackContext):
-    update.effective_message.reply_html("Your current operation is <b>cancelled</b> ❌")
-    return -1
+    update.effective_message.reply_html("Your current forms are  <b>deleted</b> ❌")
+    return title_list == []
 """
 def help_command(update: Update, context: CallbackContext):
     update.effective_message.reply_html(
