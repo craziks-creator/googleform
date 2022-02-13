@@ -105,7 +105,7 @@ def start_command(update: Update, context: CallbackContext):
     User.add_user(userid)
 
     if not context.args:
-        return beginning(update)
+        return beginning(update,context)
 
     else:
         ownerid, formid = list(map(int, context.args[0].split("_")))
@@ -197,7 +197,7 @@ def answering(update: Update, context: CallbackContext):
             counter += 1
         update.effective_message.reply_html(ans_text)
         storing_answers(update, context)
-        update.effective_message.reply_text("Your answers are saved 🗒")
+        update.effective_message.reply_text("Your answers are saved 🗒 Thank you")
         context.user_data.clear()
         #return beginning(update, context)
 
