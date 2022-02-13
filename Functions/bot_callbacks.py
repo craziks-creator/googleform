@@ -45,7 +45,6 @@ def typing_commands_in_CH(update: Update, context: CallbackContext):
     #command = update.effective_message.text[: update.message.entities[0].length]
     update.effective_message.reply_text(
         f"Your current process is cancelled ❌",
-        reply_markup=menu_markup,
     )
     return ConversationHandler.END
 
@@ -73,7 +72,7 @@ def delete_command(update: Update, context: CallbackContext):
 """
 def help_command(update: Update, context: CallbackContext):
     update.effective_message.reply_html(
-        help_message, reply_markup=menu_markup)
+        help_message)
 
     return ConversationHandler.END
 
@@ -81,7 +80,7 @@ def stats(update: Update, context :CallbackContext):
     user_list = User.get_all()
     total_forms = Bot.get_total_forms()
     stats_text = f"Total users : <b>{len(user_list)} 👥</b>\nTotal Forms Created : <b>{total_forms}</b> 📝"
-    update.effective_message.reply_html(stats_text, reply_markup=menu_markup)
+    update.effective_message.reply_html(stats_text)
     return
 
 def show_menu(update: Update, conext : CallbackContext):
