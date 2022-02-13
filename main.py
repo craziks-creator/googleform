@@ -107,6 +107,7 @@ def main():
 
     d.add_handler(CommandHandler("help", help_command))
     d.add_handler(CommandHandler("stats", stats))
+    #d.add_handler(CommandHandler("delete", delete))
 
     d.add_handler(MessageHandler(Filters.regex('🧾 Menu'),show_menu))
     d.add_handler(MessageHandler(Filters.regex("View 🔎"),view_forms_ck))
@@ -126,6 +127,8 @@ def main():
             BotCommand("answers", "Answers for your Forms"),
             BotCommand("help", "Available commands"),
             BotCommand("stats", "Get bot statistics"),
+            #BotCommand("delete", "delete all forms"),
+            
         ]
     )
     updater.start_polling()
