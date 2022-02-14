@@ -62,7 +62,7 @@ def unknown_commands(update: Update, context: CallbackContext):
 
 ## Reply Keyboard button = Cancel
 def cancel_command(update: Update, context: CallbackContext):
-    update.effective_message.reply_html("Your current operation is <b>cancelled</b> ❌")
+    update.effective_message.reply_html("Your current operation is <b>cancelled</b> ❌. \n  click on previous Link again to submit response  ")
     return -1
 
 """
