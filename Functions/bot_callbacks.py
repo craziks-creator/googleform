@@ -50,12 +50,12 @@ def typing_commands_in_CH(update: Update, context: CallbackContext):
 
 def unknown_messages(update: Update, context: CallbackContext):
     update.effective_message.reply_text(
-        "I m unable to recognise this 😔"
+        " I am unable to recognise this 😔 Type /help for available commands"
     )
 
 def unknown_commands(update: Update, context: CallbackContext):
     update.effective_message.reply_text(
-        "Sorry, I didn't understand that command 😔"
+        "Sorry, I didn't understand that command 😔 Type /help"
     )
     return help_command(update, context)
 
